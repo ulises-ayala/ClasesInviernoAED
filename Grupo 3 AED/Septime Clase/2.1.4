@@ -1,0 +1,23 @@
+Ejercicio 2.1.4
+Se dispone de una secuencia de números de socios, y se desea saber la cantidad de socios que están registrados.
+
+Secuencia de Socios
+
+1432 1434 5123 1241 5212 [FDS]
+
+Accion 2.1.4() es
+	Ambiente
+		sec: secuencia de enteros
+		v:enteros
+		cont: entero
+	Proceso
+		Arr(sec)
+		Avz(sec,v)
+		cont:=0
+		Mientras NFDS(sec) hacer
+			cont:= cont + 1
+			Avz(sec,v)
+		FinMientras
+		Esc("La cantidad de socios son:", cont)
+		Cerrar(sec)
+FinAccion

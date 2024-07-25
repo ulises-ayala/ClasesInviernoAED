@@ -1,0 +1,61 @@
+La secuencia de socios del problema anterior tiene el inconveniente de que los números están ordenados pero no son correlativos. Se desea generar una secuencia que contenga los números de socios que no figuran en la secuencia de socios.
+
+Accion 2.1.5() es
+	Ambiente
+		sec,sal: secuencia de enteros
+		v: entero
+		aux: entero
+		restante: entero
+	Proceso
+		Arr(sec)
+		Crear(sal)
+		Avz(sec,v)
+		Mientras NFDS(sec) hacer
+			aux:= v // 
+			Avz(sec,v)
+			Para i:=aux hasta (v-1) entonces
+				restante:= i + 1
+				Si restante < v hacer
+					Esc(sal,restante)
+				FinSi
+			FinPara
+		FinMientras
+		Esc("Se creo la nueva secuencia con los socios faltantes")
+		Cerrar(sal)
+		Cerrar(sec)
+FinAccion
+
+// aux = 
+// restante = 
+Secuencia De Entrada
+
+1  4  6  9 (FDS)
+
+Secuencia de Salida
+2  3  5
+
+
+
+
+Accion 1.05 es 
+  Ambiente 
+	  sec, sal: secuencia de enteros
+	  v: enteros
+	  aux: entero 
+  Proceso 
+	  Arr (sec)
+	  Avz (sec, v)
+	  Crear (sal)
+	  Mientras NFDS(sec) hacer 
+		    aux:= v + 1
+		    Si (v = aux) ent 
+		      Avz (sec, v)
+		    Sino 
+		      Si (v <> aux) ent 
+		        Esc (sal, v)
+		      Finsi 
+		    Finsi
+	  Finmientras 
+	  Cerrar (sec)
+	  Cerrar (sal)
+Finaccion

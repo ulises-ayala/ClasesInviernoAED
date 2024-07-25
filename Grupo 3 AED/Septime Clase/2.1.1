@@ -1,0 +1,23 @@
+Ejercicio 2.1.1
+Dada una secuencia de letras del alfabeto que finaliza con una marca '*', contar cuantas letras "A" hay en la secuencia.
+
+[AKASKASLMA*]
+v         
+Accion 2.1.1() es 
+	Ambiente
+		sec: secuencia de caracteres
+		v: caracter
+		cont: entero
+	Proceso
+		Arr(sec)
+		Avz(sec,v)
+		cont:=0
+		Mientras v <> "*" hacer
+			Si v = "A" hacer
+				cont:= cont + 1 // 4
+			FinSi
+			Avz(sec,v)
+		FinMientras
+		Esc("La cantidad de letras A en la secuencia es de:", cont)
+		Cerrar(sec)
+FinAccion

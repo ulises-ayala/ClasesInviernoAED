@@ -1,0 +1,27 @@
+Ejercicio 2.1.3
+Se dispone de una secuencia de caracteres y se desea obtener una secuencia de salida que resulte de copiar la secuencia de entrada, descartando el caracter "$".
+
+Secuencia de Entrada:
+[H$A(FDS)]
+      v
+Secuencia de Salida:
+[HA]
+
+Accion 2.1.3() es 
+	Ambiente
+		sec: secuencia de caracter
+		v: caracter
+		sal: secuencia de caracter
+	Proceso
+		Arr(sec)
+		Avz(sec,v)
+		Crear(sal)
+		Mientras NFDS(sec) hacer
+			Si v <> "$" hacer
+				Esc(sal,v)
+			FinSi
+			Avz(sec,v)
+		FinMientras
+		Cerrar(sec)
+		Cerrar(sal)
+FinAccion
